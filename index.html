@@ -1,0 +1,64 @@
+<html>
+    
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://www.drv.tw/inc/wd.js?s=jynyhy9vu5r8xz5zy0utww"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <script>
+    function setup() {
+  canvas = createCanvas(640, 700);
+  canvas.position(150,150);
+  video = createCapture(VIDEO);
+  video.hide();
+}
+
+function draw() {
+  image(video, 230, 150, 220, 200);
+  
+  fill(255,0,0);
+  stroke(255,0,0);
+  circle(50, 50, 50);
+  circle(50, 500, 50);
+  circle(600, 50, 50);
+  circle(600, 500, 50);
+
+
+  fill(255,56,22);
+  stroke(255,56,22);
+  rect(40,50,20, 450 );
+  rect(590, 50, 20, 450);
+  rect(40, 40, 570, 20);
+  rect(40, 500, 570, 20);
+  
+}
+
+function preload() {
+
+}
+
+function click() {
+  save("scaryPicture.png");
+}
+
+  </script>
+    
+
+  
+<body>
+  <center>
+    <h1> Picture frame </h1>
+<br>
+    <button id="button" onclick="click()"> Save image </button>
+
+
+  </center>
+</body>
+
+</html>
